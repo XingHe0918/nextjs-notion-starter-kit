@@ -44,8 +44,8 @@ export const NotionPageHeader: React.FC<{
   // }
 
 return (
-   <></> // 返回一个空的 JSX 元素
     // <header className='notion-header'>
+        <header>
     //   <div className='notion-nav-header'>
         {/* 
           <Breadcrumbs block={block} rootOnly={true} />
@@ -86,6 +86,6 @@ return (
           </div>
         */}
     //   </div>
-    // </header>
+    </header>
   )
 }
