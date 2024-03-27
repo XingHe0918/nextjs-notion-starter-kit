@@ -22,7 +22,7 @@ import { useDarkMode } from '@/lib/use-dark-mode'
 import { Footer } from './Footer'
 import { GitHubShareButton } from './GitHubShareButton'
 import { Loading } from './Loading'
-// import { NotionPageHeader } from './NotionPageHeader'
+import { NotionPageHeader } from './NotionPageHeader'
 import { Page404 } from './Page404'
 import { PageAside } from './PageAside'
 import { PageHead } from './PageHead'
@@ -151,23 +151,23 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const router = useRouter()
   const lite = useSearchParam('lite')
 
-  // const components = React.useMemo(
-  //   () => ({
-  //     nextImage: Image,
-  //     nextLink: Link,
-  //     Code,
-  //     Collection,
-  //     Equation,
-  //     Pdf,
-  //     Modal,
-  //     Tweet,
-  //     // Header: NotionPageHeader,
-  //     propertyLastEditedTimeValue,
-  //     propertyTextValue,
-  //     propertyDateValue
-  //   }),
-  //   []
-  // )
+  const components = React.useMemo(
+    () => ({
+      nextImage: Image,
+      nextLink: Link,
+      Code,
+      Collection,
+      Equation,
+      Pdf,
+      Modal,
+      Tweet,
+      // Header: NotionPageHeader,
+      propertyLastEditedTimeValue,
+      propertyTextValue,
+      propertyDateValue
+    }),
+    []
+  )
 
   // lite mode is for oembed
   const isLiteMode = lite === 'true'
@@ -262,7 +262,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
           pageId === site.rootNotionPageId && 'index-page'
         )}
         darkMode={isDarkMode}
-{/*         components={components} */}
+        components={components}
         recordMap={recordMap}
         rootPageId={site.rootNotionPageId}
         rootDomain={site.domain}
