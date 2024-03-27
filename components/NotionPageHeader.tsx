@@ -46,6 +46,7 @@ export const NotionPageHeader: React.FC<{
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
+        ssssssssssssss
         <Breadcrumbs block={block} rootOnly={true} />
 
         <div className='notion-nav-header-rhs breadcrumbs'>
@@ -80,7 +81,6 @@ export const NotionPageHeader: React.FC<{
             .filter(Boolean)}
 
           <ToggleThemeButton />
-          阿达是的
 {/*           {isSearchEnabled && <Search block={block} title={null} />} */}
         </div>
       </div>
