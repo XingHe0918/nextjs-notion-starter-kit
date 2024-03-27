@@ -44,8 +44,8 @@ export const NotionPageHeader: React.FC<{
   // }
 
 return (
-    <header className='notion-header'>
-      <div className='notion-nav-header'>
+    // <header className='notion-header'>
+    //   <div className='notion-nav-header'>
         {/* 
           <Breadcrumbs block={block} rootOnly={true} />
 
@@ -84,7 +84,7 @@ return (
             {isSearchEnabled && <Search block={block} title={null} />}
           </div>
         */}
-      </div>
-    </header>
+    //   </div>
+    // </header>
   )
 }
