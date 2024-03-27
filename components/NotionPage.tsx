@@ -8,7 +8,7 @@ import cs from 'classnames'
 import { PageBlock } from 'notion-types'
 import { formatDate, getBlockTitle, getPageProperty } from 'notion-utils'
 import BodyClassName from 'react-body-classname'
-// import { NotionRenderer } from 'react-notion-x'
+import { NotionRenderer } from 'react-notion-x'
 import TweetEmbed from 'react-tweet-embed'
 import { useSearchParam } from 'react-use'
 
@@ -151,23 +151,23 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const router = useRouter()
   const lite = useSearchParam('lite')
 
-  const components = React.useMemo(
-    () => ({
-      nextImage: Image,
-      nextLink: Link,
-      Code,
-      Collection,
-      Equation,
-      Pdf,
-      Modal,
-      Tweet,
-      // Header: NotionPageHeader,
-      propertyLastEditedTimeValue,
-      propertyTextValue,
-      propertyDateValue
-    }),
-    []
-  )
+  // const components = React.useMemo(
+  //   () => ({
+  //     nextImage: Image,
+  //     nextLink: Link,
+  //     Code,
+  //     Collection,
+  //     Equation,
+  //     Pdf,
+  //     Modal,
+  //     Tweet,
+  //     // Header: NotionPageHeader,
+  //     propertyLastEditedTimeValue,
+  //     propertyTextValue,
+  //     propertyDateValue
+  //   }),
+  //   []
+  // )
 
   // lite mode is for oembed
   const isLiteMode = lite === 'true'
@@ -256,13 +256,13 @@ export const NotionPage: React.FC<types.PageProps> = ({
       {isLiteMode && <BodyClassName className='notion-lite' />}
       {isDarkMode && <BodyClassName className='dark-mode' />}
 
-{/*       <NotionRenderer
+      <NotionRenderer
         bodyClassName={cs(
           styles.notion,
           pageId === site.rootNotionPageId && 'index-page'
         )}
         darkMode={isDarkMode}
-        components={components}
+{/*         components={components} */}
         recordMap={recordMap}
         rootPageId={site.rootNotionPageId}
         rootDomain={site.domain}
@@ -279,7 +279,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
         footer={footer}
-      /> */}
+      />
 
       <GitHubShareButton />
     </>
