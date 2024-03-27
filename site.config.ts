@@ -18,8 +18,8 @@ export default siteConfig({
 
   // social usernames (optional)
   twitter: '',
-  github: 'transitive-bullshit',
-  linkedin: 'fisch2',
+  github: '',
+  linkedin: '',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
