@@ -1,38 +1,8 @@
 import * as React from 'react'
 
 import * as types from 'notion-types'
-import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
-import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
-import cs from 'classnames'
-// import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
-// import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
-import { Breadcrumbs, Header, useNotionContext } from 'react-notion-x'
-import {  navigationLinks, navigationStyle } from '@/lib/config'
-import { useDarkMode } from '@/lib/use-dark-mode'
-
-import styles from './styles.module.css'
-
-// const ToggleThemeButton = () => {
-//   const [hasMounted, setHasMounted] = React.useState(false)
-//   const { isDarkMode, toggleDarkMode } = useDarkMode()
-
-//   React.useEffect(() => {
-//     setHasMounted(true)
-//   }, [])
-
-  const onToggleTheme = React.useCallback(() => {
-    toggleDarkMode()
-  }, [toggleDarkMode])
-
-  return (
-    <div
-      className={cs('breadcrumb', 'button', !hasMounted && styles.hidden)}
-      onClick={onToggleTheme}
-    >
-      {hasMounted && isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
-    </div>
-  )
-}
+import { Header, Breadcrumbs, useNotionContext } from 'react-notion-x'
+import { navigationLinks, navigationStyle } from '@/lib/config'
 
 export const NotionPageHeader: React.FC<{
   block: types.CollectionViewPageBlock | types.PageBlock
@@ -79,9 +49,8 @@ export const NotionPageHeader: React.FC<{
             })
             .filter(Boolean)}
 
-{/*           <ToggleThemeButton /> */}
-
-{/*           {isSearchEnabled && <Search block={block} title={null} />} */}
+          {/* 删除了ToggleThemeButton组件的相关引用 */}
+          {/* 删除了isSearchEnabled && <Search block={block} title={null} /> */}
         </div>
       </div>
     </header>
