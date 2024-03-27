@@ -36,7 +36,7 @@ import * as React from 'react'
 
 export const NotionPageHeader: React.FC<{
   // block: types.CollectionViewPageBlock | types.PageBlock
-}> => {
+}> = () => {
   // const { components, mapPageUrl } = useNotionContext()
 
   // if (navigationStyle === 'default') {
